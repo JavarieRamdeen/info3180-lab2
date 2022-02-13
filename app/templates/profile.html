@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="profile_card">
+    <div class="profile_wrap">
+        <div class="profile_img">
+            <img src="{{ url_for('static', filename='pp.jpg') }}" alt="profile_img">
+            <p class="name">Javarie Ramdeen</p>
+            <p class="username">@JRamdeen</p>
+            <p class="location">Kingston, Jamaica</p>
+            <p class="date_join">{{ join }}</p>
+        </div>
+    </div>
+    <div class="profile_wrap2">
+        <p class="bio">I am smart and talented young man who loves website design and development. Contact me if you'd like to work together on a new project.</p>
+        <div class="profile_container">
+            <div class="profile_info">
+                <div class=num>
+                    7
+                </div>
+                <div class=title>
+                    Posts
+                </div>
+            </div>
+            <div class="profile_info">
+                <div class=num>
+                    100
+                </div>
+                <div class=title>
+                    Following
+                </div>
+            </div>
+            <div class="profile_info">
+                <div class=num>
+                    250
+                </div>
+                <div class=title>
+                    Followers
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="follow_btn">
+        Follow
+    </div>
+</div>
+{% endblock %}

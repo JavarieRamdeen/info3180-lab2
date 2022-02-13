@@ -5,6 +5,7 @@ Werkzeug Documentation:  https://werkzeug.palletsprojects.com/
 This file creates your application.
 """
 
+import datetime
 from app import app
 from flask import render_template, request, redirect, url_for, flash
 
@@ -22,8 +23,16 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Javarie Ramdeen")
 
+@app.route('/profile')
+def profile():
+    date_joined = datetime.date(2019, 2, 7)
+    """Render the website's profile page."""
+    return render_template('profile.html',join = format_date_joined(date_joined))
+
+def format_date_joined(date_joined):
+    return("Joined " + date_joined.strftime("%B, %Y"))
 
 ###
 # The functions below should be applicable to all Flask apps.
